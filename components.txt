@@ -1,0 +1,6 @@
+READ me for base config
+
+html purifier - https://github.com/refringe/codeigniter-htmlpurifier
+force ssl from this thread - http://ellislab.com/forums/viewthread/83154/
+extending CI_Controller thanks to Phil Sturgeon - http://philsturgeon.co.uk/blog/2010/02/CodeIgniter-base-Classes-Keeping-it-DRY
+https base url - http://sajjadhossain.com/2010/08/18/ssl-https-urls-and-codeigniter-extending-the-core/

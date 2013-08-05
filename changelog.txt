@@ -1,0 +1,25 @@
+//change log for base-config-ci from base CI install
+22/03/13
+.htaccess in /
+HMVC from https://bitbucket.org/wiredesignz/codeigniter-modular-extensions-hmvc/overview and moved files
+create modules in /application
+added force_ssl_helper in /application/helpers
+added MY_Controller to application/core
+added $config['ssl_pages'] = array('welcome'); to application/config/config
+added $config['base_upload_path'] = 'C:\\xampp\\htdocs\\base-config-ci\\'; to application/config/config
+removed index.php from $config['index_page'] = ''; in application/config/config
+added base url
+changed helper name from my_force_ssl_helper to force_ssl_helper
+changed MY_Controller line 12 if (in_array($this->uri->segment(2), $this->config->item('ssl_pages'))): to if (in_array($this->uri->segment(1), $this->config->item('ssl_pages'))):
+change MY_Controller extends CI_Controller to MY_Controller extends MX_Controller
+created DB base-config-ci
+created table bc_sessions_tb
+change to $config['sess_cookie_name']		= 'bc_session'; in application/config/config
+changed $config['sess_table_name']      = 'bc_sessions_tb'; in application/config/config
+changed $autoload['libraries'] = array('sessions','database'); in application/config/config
+change $config['sess_encrypt_cookie']	= TRUE; in application/config/config
+changed application/third_party/MX/modules.php line 76 ala https://bitbucket.org/wiredesignz/codeigniter-modular-extensions-hmvc/pull-request/5/return-error-messages-instead-of-logging/diff
+use     //Limit access
+	function _remap(){
+		show_404();
+	} in all modules that don't need/want access
